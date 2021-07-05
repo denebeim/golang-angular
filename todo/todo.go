@@ -25,7 +25,11 @@ func initialiseList() {
 type Todo struct {
 	ID       string `json:"id"`
 	Message  string `json:"message"`
-	Complete string `json:"complete"`
+	Complete bool   `json:"complete"`
+}
+
+func Get() []Todo {
+	return list
 }
 
 func newTodo(msg string) Todo {
